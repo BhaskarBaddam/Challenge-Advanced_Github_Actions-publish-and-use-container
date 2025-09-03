@@ -98,5 +98,5 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - run: docker run ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main | grep container
+    - run: docker run ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main | grep container && echo "TEST PASSED"
       
